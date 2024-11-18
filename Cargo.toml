@@ -1,0 +1,23 @@
+[package]
+name = "deno_task_shell"
+version = "0.18.1"
+authors = ["the Deno authors"]
+documentation = "https://docs.rs/deno_task_shell"
+edition = "2021"
+homepage = "https://deno.land/"
+license = "MIT"
+repository = "https://github.com/denoland/deno_task_shell"
+description = "Cross platform scripting for deno task"
+
+[features]
+default = ["shell"]
+shell = ["futures", "glob", "os_pipe", "path-dedot", "tokio", "tokio-util"]
+serialization = ["serde"]
+
+[dependencies]
+
+[dev-dependencies]
+parking_lot = "0.12.1"
+pretty_assertions = "1"
+serde_json = "1.0.111"
+tempfile = "3.8.1"
